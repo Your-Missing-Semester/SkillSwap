@@ -1,0 +1,127 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ABD2FA;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  padding: 0;
+  border-radius: 0;
+  height: 100%; /* Full height of the viewport */
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Center the content vertically */
+  width: 100%;
+  height: 100%; /* Full height of the viewport */
+  background: #ABD2FA;
+  padding: 20px;
+  border-radius: 0; /* No border radius */
+}
+
+.form-container {
+  display: flex;
+  gap: 50px; /* Space between the forms */
+}
+
+.form-section {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  gap: 25px;
+  padding: 20px; /* Padding inside the form */
+  border: 1px solid #ABD2FA; /* Border color matches the main background */
+  background-color: #f9f9f9; /* Different background color to separate from main background */
+  border-radius: 10px; /* Adding some roundness to the form section borders */
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 9px;
+  width: 100%;
+}
+
+.text {
+  color: #091540;
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.underline {
+  width: 61px;
+  height: 6px;
+  background: #091540;
+  border-radius: 9px;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.input {
+  display: flex;
+  align-items: center;
+  margin: auto;
+  width: 100%; /* Adjusted to be responsive */
+  max-width: 480px;
+  height: 80px;
+  background: #eaeaea;
+  border-radius: 6px;
+}
+
+.input input {
+  height: 50px;
+  width: calc(100% - 30px); /* Responsive width */
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #797979;
+  font-size: 16px;
+  padding: 0 15px;
+}
+
+.submit-container {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 50px; /* Adjusted height */
+  color: #fff;
+  border-radius: 10px;
+  font-size: 19px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.1s ease;
+}
+
+.submit:hover {
+  transform: scale(1.05);
+}
+
+.submit.save {
+  background: #7692ff;
+}
+
+.submit.cancel {
+  background: #fff;
+  color: #7692ff;
+  border: 2px solid #7692ff; /* Border for the cancel button */
+}
