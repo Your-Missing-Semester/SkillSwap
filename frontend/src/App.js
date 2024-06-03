@@ -1,14 +1,14 @@
-// import logo from './logo.svg';
+import logo from './logo.svg';
+import React from 'react';
 import './App.css';
-import './SignUp.css';
 import SignUp from './SignUp';
 
 function App() {
+  <SignUp></SignUp>
   return (
-    <><div className="App">
-
-      {<header className="App-header">
-        <img className="App-logo" alt="logo" />
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
@@ -20,20 +20,12 @@ function App() {
         >
           Learn React
         </a>
-
-      </header>}
-
-
-
-
-    </div><SignUp></SignUp></>
-
+      </header>
+    </div>
+    
+    
   );
 
 }
 
 export default App;
-/* 
-this went in between the header tags
-
-*/
