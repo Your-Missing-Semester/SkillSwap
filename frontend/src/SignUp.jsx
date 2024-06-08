@@ -9,7 +9,6 @@ function SignUp() {
 
         <h1>Sign Up</h1>
         
-        
         <div className='form-group'>
 
         <label>Email:</label>

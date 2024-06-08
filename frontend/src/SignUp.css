@@ -5,35 +5,34 @@ body {
     height: 100vh;
     margin: 0; 
     background-color: rgb(70, 188, 247); 
-    border: 2px solid;
+    border: solid;
 }
 
 .form {
     display: flex;
     flex-direction: column;
-    max-width: 300px;
+    max-width: 50%;
     width: 150%; 
     padding: 30%; 
     background-color: rgb(255, 255, 255);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-    border-radius: 8px;
+    border-radius: 1em;
     justify-content: center;
-    border: 2px solid blue;
+    border: solid blue;
     margin-left: auto;
     margin-right: auto;
 
 }
 .form label {
-    margin-bottom: 10px;
-    margin-top: 10px;
+    margin-bottom: 1em;
+    margin-top: 1em;
     margin-right: auto;
 
 }
 
 .form input[type="submit"] {
     text-align: center;
-    margin-top: 20px;
-    padding: 10px 20px;
+    margin-top: 1.5em;
+    padding: 1em;
     background-color: rgb(66, 172, 239);
 
     
@@ -45,8 +44,8 @@ body {
 
 .logInButton {
     text-align: center;
-    margin-top: 20px;
-    padding: 10px 20px;
+    margin-top: 1.5em;
+    padding: 1em;
 
 }
 
