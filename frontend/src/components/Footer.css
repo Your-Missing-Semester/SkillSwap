@@ -1,0 +1,58 @@
+.footer {
+	margin: 0 48px 24px 48px;
+}
+
+.footer-1, .footer-2, .footer-3 {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.footer-1 {
+	margin: 0 0 24px 0;
+}
+
+.footer-1 div {
+	height: 44px;
+	width: 196px;
+	font-weight: 600;
+	font-size: 24px;
+	border: 2px solid #000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+	color: #000;
+}
+
+.footer-1 ul {
+	margin: 0;
+	list-style: none;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.footer-1 li {
+	margin: 0 24px 0 0;
+}
+
+.footer-1 li:last-child {
+	margin: 0;
+}
+
+.footer-1 .social {
+	height: 32px;
+	width: 32px;
+	border: 2px solid #000;
+}
+
+.footer-2 p, .footer-3 p {
+	margin: 0 0 8px 0;
+}
+
+.footer-2 a, .footer-3 a {
+	text-decoration: none;
+	color: #000000;
+}
