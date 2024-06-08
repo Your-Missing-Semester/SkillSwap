@@ -3,7 +3,7 @@ import './LoginForm.css';
 
 const LoginForm = () => {
     return (
-        <div className='Starter'>
+        <div className='starter'>
             <form action=''>
                 <h1>Login</h1>
                 <div className='input-box'>
@@ -12,9 +12,9 @@ const LoginForm = () => {
                 <div className='input-box'>
                     <input type="password" placeholder='Password' required />
                 </div>
-
                 <div className="remember-forgot">
-                    <label><input type="checkbox" />Remember me</label>
+                    <input type="checkbox" id="rememberMe"/>
+                    <label for="rememberMe">Remember me</label>
                     <a href='#'>Forgot password?</a>
                 </div>
 
