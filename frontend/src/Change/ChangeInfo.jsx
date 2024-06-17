@@ -25,7 +25,6 @@ const ChangeInfo = () => {
             <div className='submit cancel'>CANCEL</div>
           </div>
         </div>
-        
         <div className="form-section">
           <div className="header">
             <div className="text">Change Password</div>
@@ -36,13 +35,11 @@ const ChangeInfo = () => {
               <input type="password" id="oldPassword" placeholder='Old Password' />
             </div>
           </div>
-
           <div className="inputs">
             <div className="input">
               <input type="password" id="new-password" placeholder='New Password' />
             </div>
           </div>
-          
           <div className="inputs">
             <div className="input">
               <input type="password" id="passwordConfirm" placeholder='Confirm Password'/>
