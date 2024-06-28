@@ -28,20 +28,21 @@ function SignUp() {
         <input type="password" name="password" />
         </div>
        
-        <div className='submitOption'>
+        <div className='submit-Option'>
         <input type="submit" value="Sign Up" />
-        <button className="logInButton">Log In</button>
+
+        <button className="logIn-Button">
+          Log In
+          </button>
         </div>
-    
+
+
     </form>
   
     </div> 
-    
 
   );
 
 }
 
 export default SignUp;
-
-

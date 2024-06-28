@@ -8,50 +8,53 @@ body {
     border: solid;
 }
 
-.form {
+
+
+form {
     display: flex;
     flex-direction: column;
-    max-width: 50%;
-    width: 150%; 
-    padding: 30%; 
+    width: 100%; 
+    padding: 2em; /* Reasonable padding */
     background-color: rgb(255, 255, 255);
     border-radius: 1em;
     justify-content: center;
     border: solid blue;
-    margin-left: auto;
-    margin-right: auto;
-
+    margin: 1em 0;
 }
 .form label {
     margin-bottom: 1em;
     margin-top: 1em;
     margin-right: auto;
-
 }
 
 .form input[type="submit"] {
     text-align: center;
     margin-top: 1.5em;
     padding: 1em;
-    background-color: rgb(66, 172, 239);
-
-    
+    background-color: rgb(66, 172, 239);  
 }
+
 .form-group {
     display: flex;
     flex-direction: column;
-  }
+}
 
-.logInButton {
+.logIn-Button {
     text-align: center;
     margin-top: 1.5em;
     padding: 1em;
-
 }
 
-
-.submitOption{
+.submit-Option {
     display: flex;
     justify-content: space-between;
+}
 
+.box-outside {
+    background-color: white;
+    padding: 1em;
+    border-radius: 1em;
+    margin: 1em 0;
+    width: 100%;
+    text-align: center;
 }
