@@ -4,11 +4,12 @@ const port = 8000;
 
 
 app.get("/", function (req, res) {
-    res.send("SMILE! :D");
-  });
+  res.send("SMILE! :D");
+});
+  
 
 
 app.listen(port, function () {
-    console.log(`SkillSwap server listening on port ${port}`);
-  });
+  console.log(`SkillSwap server listening on port ${port}`);
+});
 

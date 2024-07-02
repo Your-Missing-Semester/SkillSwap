@@ -1,5 +1,24 @@
 {
   "dependencies": {
     "express": "^4.19.2"
-  }
+  },
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "server side of skillswap",
+  "main": "server.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Your-Missing-Semester/SkillSwap.git"
+  },
+  "author": "Skillswap Team",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Your-Missing-Semester/SkillSwap/issues"
+  },
+  "homepage": "https://github.com/Your-Missing-Semester/SkillSwap#readme"
 }
