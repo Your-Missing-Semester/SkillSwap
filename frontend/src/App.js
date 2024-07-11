@@ -8,19 +8,19 @@ import About from './pages/About.js';
 import Home from './pages/Home.js';
 import SignUp from './components/SignUp/SignUp.jsx';
 import { BrowserRouter } from 'react-router-dom';
+import LoginForm from './components/LoginForm/LoginForm.jsx';
 
 const App = () => {
   return (
     <BrowserRouter>
-      <Navbar />
-
       <Routes>
+        <Route index element={<LandingPage />} />
         <Route path="/about" element={<About />} />
         <Route path="/" element={<LandingPage />} />
         <Route path="/sign-up" element={<SignUp />} />
         <Route path="/home" element={<Home />} />
+        <Route path="log-in" element={<LoginForm />} />
       </Routes>
-      <Footer />
     </BrowserRouter>
   );
 };
