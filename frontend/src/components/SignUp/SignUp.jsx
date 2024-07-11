@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './SignUp.module.css'; // Adjusted import to use the styles object
+import styles from './SignUp.module.css';
 
 function SignUp() {
   return (
