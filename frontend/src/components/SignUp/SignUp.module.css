@@ -10,7 +10,7 @@ form {
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding: 2em; /* Reasonable padding */
+  padding: 2em;
   background-color: rgb(255, 255, 255);
   border-radius: 1em;
   justify-content: center;
@@ -41,11 +41,11 @@ form {
   font-size: large;
 }
 
-.submit-Option {
+.submit-option {
   display: flex;
   justify-content: space-between;
 }
-.logIn-Button {
+.log-in-button {
   text-align: center;
   margin-top: 1.5em;
   padding: 1em;
