@@ -1,7 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './SignUp.module.css';
+import axios from 'axios';
 
-function SignUp() {
+const SignUp = () => {
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await axios.post('http://localhost:8000/api/sign-up', {
+        username,
+        password,
+      });
+      console.log('Signup successful:', response.data);
+    } catch (err) {
+      setError(err.response?.data?.message || 'Signup failed');
+      console.error('Signup error:', err);
+    }
+  };
+
   return (
     <div>
       <form className={styles.form}>
@@ -19,6 +38,6 @@ function SignUp() {
       </form>
     </div>
   );
-}
+};
 
 export default SignUp;
