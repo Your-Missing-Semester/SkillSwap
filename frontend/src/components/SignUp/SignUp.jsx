@@ -36,7 +36,7 @@ const SignUp = () => {
             type="password"
             placeholder="Password"
             value={password}
-            onChange={setPassword(e.target.value)}
+            onChange={(e) => setPassword(e.target.value)}
           />
           <input type="password" placeholder="ReType Password" />
         </div>
