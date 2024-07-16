@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const port = 8000;
+const port = 3000;
 
 app.get("/", function (req, res) {
   res.send("SMILE! :D");
@@ -11,6 +11,7 @@ app.listen(port, function () {
 });
 
 app.post("/api/sign-up", async function (req, res) {
+  console.log("Sign up request received");
   const username = req.body.username;
   const password = req.body.password;
 

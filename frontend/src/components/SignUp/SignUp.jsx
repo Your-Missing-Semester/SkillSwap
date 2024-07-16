@@ -10,7 +10,7 @@ const SignUp = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:8000/api/sign-up', {
+      const response = await axios.post('http://localhost:3000/api/sign-up', {
         username,
         password,
       });
