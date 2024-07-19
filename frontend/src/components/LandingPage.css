@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root {
+	font-family: 'Inter', sans-serif;
+	font-weight: 500;
+	/**
+		background-image: linear-gradient(#091540, #3d518c)
+	*/
+}
+
+.logo-1 {
+	border: 2px solid #000;
+	height: 160px;
+	margin: 0 48px 48px 48px;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+}
+
+.logo-1 p, .logo-2 p, .logo-3 p {
+	margin: 0;
+	padding: 0;
+	color: #000;
+	font-size: 64px;
+	font-weight: 600;
+}
+
+.logo-2 {
+	border: 2px solid #000;
+	height: 240px;
+	margin: 0 48px 48px 48px;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+}
+
+.logo-3 {
+	border: 2px solid #000;
+	width: 448px;
+	height: 332px;
+	margin: 0 48px 48px 48px;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+	flex: 2;
+}
+
+.header-div {
+	display: flex;
+	margin: 0 0 0 48px;
+	padding: 0;
+	text-align: start;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.header {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	flex: 2;
+}
+
+.header h1 {
+	margin: 0 0 24px 0;
+	font-size: 48px;
+	margin-bottom: 24px;
+}
+
+.header p {
+	font-size: 20px;
+	margin: 0 0 24px 0;
+}
+
+.header button {
+	height: 40px;
+	width: 104px;
+	font-size: 16px;
+	font-weight: 600;
+	padding: 4px 16px;
+	border: none;
+	background-color: #000;
+	color: #fff;
+	margin: 0 0 24px 0;
+}
+
+.carousel-tri-div {
+	margin: 0 48px;
+	display: flex;
+	text-align: start;
+	justify-content: space-between;
+}
+
+.carousel-tri-div h3 {
+	font-size: 24px;
+	font-weight: 600;
+	margin: 0 0 16px 0;
+}
+
+.carousel-tri-div p {
+}
+
+.carousel-tri-img-1, .carousel-tri-img-2, .carousel-tri-img-3 {
+	height: 240px;
+	width: 240px;
+	color: #000;
+	border: 2px solid #000;
+	margin: 0 0 16px 0;
+	font-size: 64px;
+	font-weight: 600;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+}
+
+.carousel-tri-img-3 {
+	margin-right: 140px;
+}
+
+.carousel-tri-1 p, .carousel-tri-2 p {
+	margin: 0 48px 48px 0;
+}
+
+.body-div {
+	margin: 0 0 48px 0;
+	display: flex;
+	text-align: start;
+	align-items: center;
+}
+
+.body-div-column {
+	margin: 0 48px 0 48px;
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+}
+
+.body-div-column h1 {
+	margin: 0 0 24px 0;
+}
+
+.body-div-column p {
+	margin: 0 0 24px 0;
+}
+
+.body-img {
+	border: 2px solid #000;
+	color: #000;
+	font-size: 64px;
+	width: 848px;
+	height: 296px;
+	margin: 0 48px 0 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+	flex: 2;
+}
