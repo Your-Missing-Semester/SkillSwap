@@ -9,6 +9,8 @@ import Home from './pages/Home.js';
 import SignUp from './components/SignUp/SignUp.jsx';
 import { BrowserRouter } from 'react-router-dom';
 import LoginForm from './components/LoginForm/LoginForm.jsx';
+import ChangeInfo from "./Change/ChangeInfo";
+
 
 const App = () => {
   return (
@@ -20,9 +22,12 @@ const App = () => {
         <Route path="/sign-up" element={<SignUp />} />
         <Route path="/home" element={<Home />} />
         <Route path="log-in" element={<LoginForm />} />
+        <Route path="change" element=(<ChangeInfo />} />
       </Routes>
     </BrowserRouter>
+
   );
 };
 
 export default App;
+
