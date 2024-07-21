@@ -9,7 +9,7 @@ import Home from './pages/Home.js';
 import SignUp from './components/SignUp/SignUp.jsx';
 import { BrowserRouter } from 'react-router-dom';
 import LoginForm from './components/LoginForm/LoginForm.jsx';
-import ChangeInfo from './Change/ChangeInfo';
+import ChangeInfo from './components/Change/ChangeInfo.jsx';
 
 const App = () => {
   return (

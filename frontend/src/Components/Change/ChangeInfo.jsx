@@ -1,5 +1,5 @@
 import React from 'react';
-import './ChangeInfo.css';
+import './ChangeInfo.module.css';
 
 const ChangeInfo = () => {
   return (
@@ -12,17 +12,17 @@ const ChangeInfo = () => {
           </div>
           <div className="inputs">
             <div className="input">
-              <input type="text" id="username" placeholder='Username' />
+              <input type="text" id="username" placeholder="Username" />
             </div>
           </div>
           <div className="inputs">
             <div className="input">
-              <input type="password" id="password" placeholder='Password' />
+              <input type="password" id="password" placeholder="Password" />
             </div>
           </div>
-          <div className='submit-container'>
-            <div className='submit save'>SAVE</div>
-            <div className='submit cancel'>CANCEL</div>
+          <div className="submit-container">
+            <div className="submit save">SAVE</div>
+            <div className="submit cancel">CANCEL</div>
           </div>
         </div>
         <div className="form-section">
@@ -32,27 +32,39 @@ const ChangeInfo = () => {
           </div>
           <div className="inputs">
             <div className="input">
-              <input type="password" id="oldPassword" placeholder='Old Password' />
+              <input
+                type="password"
+                id="oldPassword"
+                placeholder="Old Password"
+              />
             </div>
           </div>
           <div className="inputs">
             <div className="input">
-              <input type="password" id="new-password" placeholder='New Password' />
+              <input
+                type="password"
+                id="new-password"
+                placeholder="New Password"
+              />
             </div>
           </div>
           <div className="inputs">
             <div className="input">
-              <input type="password" id="passwordConfirm" placeholder='Confirm Password'/>
+              <input
+                type="password"
+                id="passwordConfirm"
+                placeholder="Confirm Password"
+              />
             </div>
           </div>
-          <div className='submit-container'>
-            <div className='submit save'>SAVE</div>
-            <div className='submit cancel'>CANCEL</div>
+          <div className="submit-container">
+            <div className="submit save">SAVE</div>
+            <div className="submit cancel">CANCEL</div>
           </div>
         </div>
       </div>
     </div>
   );
-}
+};
 
 export default ChangeInfo;
