@@ -1,5 +1,5 @@
 import React from 'react';
-import './ChangeInfo.css';
+import './ChangeInfo.module.css';
 
 const ChangeInfo = () => {
   return (
