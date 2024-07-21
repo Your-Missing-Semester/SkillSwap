@@ -1,7 +1,13 @@
 {
   "dependencies": {
+    "@quixo3/prisma-session-store": "^3.1.13",
     "axios": "^1.7.2",
+    "bcrypt": "^5.1.1",
+    "dot-env": "^0.0.1",
     "express": "^4.19.2",
     "express-session": "^1.18.0"
+  },
+  "devDependencies": {
+    "prisma": "^5.17.0"
   }
 }
