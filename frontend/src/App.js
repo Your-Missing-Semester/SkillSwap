@@ -9,6 +9,9 @@ import Home from './pages/Home.js';
 import SignUp from './Components/SignUp/SignUp.jsx';
 import { BrowserRouter } from 'react-router-dom';
 import LoginForm from './Components/LoginForm/LoginForm.jsx';
+import ChangeInfo from "./Components/Change/ChangeInfo.jsx";
+
+import LoginForm from './Components/LoginForm/LoginForm.jsx';
 import ResetPassword from './Components/ResetPassword/ResetPassword.jsx';
 
 const App = () => {
@@ -21,10 +24,12 @@ const App = () => {
         <Route path="/sign-up" element={<SignUp />} />
         <Route path="/home" element={<Home />} />
         <Route path="log-in" element={<LoginForm />} />
-        <Route path="/ResetPassword" element={<ResetPassword />} />
+        <Route path="change" element={<ChangeInfo />} />
       </Routes>
     </BrowserRouter>
+
   );
 };
 
 export default App;
+
