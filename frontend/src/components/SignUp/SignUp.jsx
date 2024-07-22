@@ -9,6 +9,7 @@ const SignUp = () => {
   const [error, setError] = useState('');
 
   const handleSubmit = async (e) => {
+    console.log('handleSubmit is running');
     e.preventDefault();
 
     if (password !== confirmPassword) {
@@ -17,9 +18,10 @@ const SignUp = () => {
     }
 
     try {
-      const response = await axios.post('http://localhost:3000/api/sign-up', {
+      const response = await axios.post('http://localhost:8080/sign-up', {
         username,
         password,
+        confirmPassword,
       });
       console.log('Signup successful:', response.data);
     } catch (err) {
@@ -28,8 +30,6 @@ const SignUp = () => {
     }
   };
 
-
-  
   return (
     <div>
       <form className={styles.form} onSubmit={handleSubmit}>

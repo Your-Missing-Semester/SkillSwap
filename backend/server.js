@@ -1,6 +1,8 @@
-// require("dotenv").config();
+// const env = require("dotenv").config();
 const express = require("express");
 const app = express();
+const PORT = 8080;
+
 const axios = require("axios");
 const session = require("express-session");
 const bcrypt = require("bcrypt");
@@ -8,19 +10,23 @@ const bcrypt = require("bcrypt");
 const { PrismaSessionStore } = require("@quixo3/prisma-session-store");
 const { PrismaClient } = require("@prisma/client");
 const prisma = require("./db/db.js");
+const cors = require("cors");
 
-const PORT = 8080;
+app.use(cors());
+app.use(express.json());
 
 app.get("/", function (req, res) {
   res.send("SMILE! :D");
   console.log("Hello World!");
 });
 
-app.listen(PORT, function () {
+app.listen(PORT, () => {
   console.log(`SkillSwap server listening on port ${PORT}`);
 });
 
-// Sign Up
+// ____________________________________________________________________________
+// SIGN UP
+// ____________________________________________________________________________
 
 app.get("/sign-up", async function (req, res) {
   console.log("Sign up page requested");
@@ -41,15 +47,15 @@ app.post("/sign-up", async function (req, res) {
     return res.send("Passwords do not match!");
   }
 
-  const userExists = await prisma.user.findFirst({
-    where: {
-      email: username,
-    },
-  });
+  // const userExists = await prisma.user.findFirst({
+  //   where: {
+  //     email: username,
+  //   },
+  // });
 
-  if (userExists) {
-    return res.status(400).send("Username is already taken");
-  }
+  // if (userExists) {
+  //   return res.status(400).send("Username is already taken");
+  // }
 
   const salt = await bcrypt.genSalt(10);
   const hashedPassword = await bcrypt.hash(password, salt);
@@ -65,7 +71,5 @@ app.post("/sign-up", async function (req, res) {
 
   const _updatedSession = await req.session.save();
 
-  res.send(_.omit(newUser, password, salt));
-
-  return res.status(200).send("Sign up successful!");
+  res.status(200).send(_.omit(newUser, password, salt), "Sign Up Successful!");
 });
