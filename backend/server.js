@@ -24,10 +24,7 @@ app.listen(PORT, function () {
 
 app.get("/sign-up", async function (req, res) {
   console.log("Sign up page requested");
-  res.status(200).send({
-    tshirt: "Sign up page",
-    something: "Sign up page",
-  });
+  res.status(200).send("Sign up page");
 });
 
 app.post("/sign-up", async function (req, res) {
