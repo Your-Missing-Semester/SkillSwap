@@ -10,10 +10,12 @@ const SignUp = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
     if (password !== confirmPassword) {
       setError('Passwords do not match!');
       return;
     }
+
     try {
       const response = await axios.post('http://localhost:3000/api/sign-up', {
         username,
@@ -26,6 +28,8 @@ const SignUp = () => {
     }
   };
 
+
+  
   return (
     <div>
       <form className={styles.form} onSubmit={handleSubmit}>
@@ -52,7 +56,7 @@ const SignUp = () => {
         </div>
         <div className={styles['submit-option']}>
           <button className={styles['sign-up-button']}>Sign Up</button>
-          <button className={styles['log-in-button']}>Log In</button>
+          <button className={styles['log-in-button']}>Log In Instead</button>
         </div>
       </form>
     </div>

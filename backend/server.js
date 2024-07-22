@@ -1,15 +1,15 @@
 // require("dotenv").config();
 const express = require("express");
+const app = express();
 const axios = require("axios");
 const session = require("express-session");
 const bcrypt = require("bcrypt");
-const http = require("http");
-// const { PrismaSessionStore } = require("@quixo3/prisma-session-store");
-// const { PrismaClient } = require("@prisma/client");
+
+const { PrismaSessionStore } = require("@quixo3/prisma-session-store");
+const { PrismaClient } = require("@prisma/client");
 const prisma = require("./db/db.js");
 
-const app = express();
-const PORT = 3000;
+const PORT = 8080;
 
 app.get("/", function (req, res) {
   res.send("SMILE! :D");
@@ -22,13 +22,21 @@ app.listen(PORT, function () {
 
 // Sign Up
 
-app.post("/api/sign-up", async function (req, res) {
+app.get("/sign-up", async function (req, res) {
+  console.log("Sign up page requested");
+  res.status(200).send({
+    tshirt: "Sign up page",
+    something: "Sign up page",
+  });
+});
+
+app.post("/sign-up", async function (req, res) {
   console.log("Sign up request received");
   const username = req.body.username;
   const password = req.body.password;
   const confirmPassword = req.body.confirmPassword;
 
-  if (!username || !password) {
+  if (!username || !password || !confirmPassword) {
     return res.status(400).send("Username and password are required");
   }
 
