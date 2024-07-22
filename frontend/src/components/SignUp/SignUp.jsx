@@ -17,8 +17,14 @@ const SignUp = () => {
       return;
     }
 
+    if (!username || !password || !confirmPassword) {
+      return setError('Username and password are required');
+    }
+
+    setError('');
+
     try {
-      const response = await axios.post('http://localhost:8080/sign-up', {
+      const response = await axios.post('http://localhost:8080/api/sign-up', {
         username,
         password,
         confirmPassword,
