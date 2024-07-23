@@ -4,7 +4,6 @@ const bcrypt = require("bcrypt");
 const cors = require("cors");
 const { PrismaClient } = require("@prisma/client");
 
-// const prisma = new PrismaClient();
 const app = express();
 const PORT = 8080;
 
@@ -27,8 +26,6 @@ app.get("/", function (req, res) {
 
 app.post("/api/sign-up", async (req, res) => {
   const { username, password, confirmPassword } = req.body;
-
-  console.log("Sign up request received");
 
   if (!username || !password || !confirmPassword) {
     return res.status(400).send("Username and password are required");

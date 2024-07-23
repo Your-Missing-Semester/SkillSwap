@@ -9,7 +9,6 @@ const SignUp = () => {
   const [error, setError] = useState('');
 
   const handleSubmit = async (e) => {
-    console.log('handleSubmit is running');
     e.preventDefault();
 
     if (password !== confirmPassword) {
@@ -29,10 +28,8 @@ const SignUp = () => {
         password,
         confirmPassword,
       });
-      console.log('Signup successful:', response.data);
     } catch (err) {
       setError(err.response?.data?.message || 'Signup failed');
-      console.error('Signup error:', err);
     }
   };
 
