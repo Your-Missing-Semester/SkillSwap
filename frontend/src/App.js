@@ -10,9 +10,8 @@ import SignUp from './Components/SignUp/SignUp.jsx';
 import { BrowserRouter } from 'react-router-dom';
 import LoginForm from './Components/LoginForm/LoginForm.jsx';
 import ChangeInfo from "./Components/Change/ChangeInfo.jsx";
+import ResetPassword from "./Components/ResetPassword/ResetPassword.jsx";
 
-import LoginForm from './Components/LoginForm/LoginForm.jsx';
-import ResetPassword from './Components/ResetPassword/ResetPassword.jsx';
 
 const App = () => {
   return (
@@ -24,7 +23,7 @@ const App = () => {
         <Route path="/sign-up" element={<SignUp />} />
         <Route path="/home" element={<Home />} />
         <Route path="log-in" element={<LoginForm />} />
-        <Route path="change" element={<ChangeInfo />} />
+        <Route path="/reset-password" element={<ResetPassword />} />
       </Routes>
     </BrowserRouter>
 

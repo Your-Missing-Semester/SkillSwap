@@ -6,7 +6,11 @@ const port = 8000;
 app.get("/", function (req, res) {
   res.send("SMILE! :D");
 });
-  
+
+
+app.post("/ResetPassword", function (req, res) {
+  res.send("Password Updated");
+})
 
 
 app.listen(port, function () {
