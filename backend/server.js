@@ -1,6 +1,8 @@
 const express = require('express');
 const app = express();
 const port = 8000;
+const cors = require('cors');
+app.use(cors());
 
 
 app.get("/", function (req, res) {
@@ -9,7 +11,7 @@ app.get("/", function (req, res) {
 
 
 app.post("/ResetPassword", function (req, res) {
-  res.send("Password Updated");
+  res.send("Password received");
 })
 
 

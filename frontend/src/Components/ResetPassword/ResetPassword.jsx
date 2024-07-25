@@ -13,16 +13,28 @@ import {
 
 
 const ResetPassword = () => {
-  function savePass() {
-    alert('Clicked!');
+
+  const navigate = useNavigate();
+
+  function handleSave({newPassword}) { 
+    axios.post(`http://localhost:8000/ResetPassword`, {
+      password: document.getElementById('newPassword').value
+    })
+    .then(function (response) {
+      console.log(response)
+      alert('Sent!')
+    })
+    .catch( function (error){
+      console.log(error)
+      alert('Error submitting password change')
+    });
   }
   
-  function cancelPass() {
+  function handleCancel() {
     alert('Returning to previous page');
     navigate(-1)
     
   }
-  const navigate = useNavigate();
 
   return (
     <div className="container">
@@ -40,7 +52,7 @@ const ResetPassword = () => {
           </div>
           <div className="inputs">
             <div className="input">
-              <input type="password" id="new-password" placeholder='New Password' />
+              <input type="password" id="newPassword" placeholder='New Password' />
             </div>
           </div>
           <div className="inputs">
@@ -49,8 +61,8 @@ const ResetPassword = () => {
             </div>
           </div>
           <div className='submit-container'>
-            <div className='submit save' onClick={savePass}>SAVE</div>
-            <div className='submit cancel' onClick={cancelPass}>CANCEL</div>
+            <div className='submit save' onClick={handleSave}>SAVE</div>
+            <div className='submit cancel' onClick={handleCancel}>CANCEL</div>
           </div>
         </div>
       </div>
