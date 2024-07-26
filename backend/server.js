@@ -10,7 +10,7 @@ app.get("/", function (req, res) {
 });
 
 
-app.post("/ResetPassword", function (req, res) {
+app.post("/resetPassword", function (req, res) {
   res.send("Password received");
 })
 

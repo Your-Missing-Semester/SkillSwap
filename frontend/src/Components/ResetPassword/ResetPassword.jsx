@@ -8,24 +8,20 @@ import {
   useNavigate,
 } from "react-router-dom";
 
-// import { Route, BrowserRouter, useNavigate as Router, Routes, useNavigate } from 'react-router-dom';
-
-
-
 const ResetPassword = () => {
 
   const navigate = useNavigate();
 
   function handleSave({newPassword}) { 
-    axios.post(`http://localhost:8000/ResetPassword`, {
+    axios.post(`http://localhost:8000/resetPassword`, {
       password: document.getElementById('newPassword').value
     })
     .then(function (response) {
-      console.log(response)
+      console.info(response)
       alert('Sent!')
     })
     .catch( function (error){
-      console.log(error)
+      console.error(error)
       alert('Error submitting password change')
     });
   }
