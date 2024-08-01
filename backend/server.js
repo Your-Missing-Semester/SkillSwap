@@ -5,15 +5,7 @@ const cors = require("cors");
 const { PrismaClient } = require("@prisma/client");
 
 const app = express();
-const PORT = 8080;
-
-app.use(
-  cors({
-    origin: ["http://localhost:3000", "http://localhost:3001"],
-    credentials: true,
-  })
-);
-app.use(express.json());
+const port = 8000;
 
 app.get("/", function (req, res) {
   res.send("SMILE! :D");
@@ -24,8 +16,9 @@ app.get("/", function (req, res) {
 // SIGN UP
 // ____________________________________________________________________________
 
-app.post("/api/sign-up", async (req, res) => {
-  const { username, password, confirmPassword } = req.body;
+app.post("/api/sign-up", async function (req, res) {
+  const username = req.body.username;
+  const password = req.body.password;
 
   if (!username || !password || !confirmPassword) {
     return res.status(400).send("Username and password are required");
