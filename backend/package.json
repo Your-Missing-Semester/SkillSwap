@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/Your-Missing-Semester/SkillSwap/issues"
   },
-  "homepage": "https://github.com/Your-Missing-Semester/SkillSwap#readme"
+  "homepage": "https://github.com/Your-Missing-Semester/SkillSwap#readme",
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
 }
