@@ -1,7 +1,32 @@
-import React from 'react';
-import './LoginForm.module.css';
+import React from "react";
+import "./LoginForm.module.css";
+import axios from "axios";
+import { redirect, useNavigate } from "react-router-dom";
 
 const LoginForm = () => {
+  const redirect = redirect();
+  const navigate = useNavigate();
+
+  function handleSave({ username, password }) {
+    axios
+      .post(`http://localhost:8000/log-in`, {
+        username: document.getElementById("username").value,
+        password: document.getElementById("password").value,
+      })
+      .then(function (response) {
+        console.info(response);
+        alert("Sent!");
+      })
+      .catch(function (error) {
+        console.error(error);
+        alert("Error submitting form");
+      });
+  }
+  function handleCancel() {
+    alert("Returning to previous page");
+    navigate(-1);
+  }
+
   return (
     <div className="starter">
       <form action="">
