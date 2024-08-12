@@ -15,3 +15,11 @@ app.post("/resetPassword", function (req, res) {
 app.listen(port, function () {
   console.log(`SkillSwap server listening on port ${port}`);
 });
+
+app.get("/log-in", function (req, res) {
+  res.send("Login received");
+});
+
+app.post("/log-in", function (req, res) {
+  res.send("something received");
+});
